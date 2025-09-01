@@ -3,6 +3,7 @@
     --bg-dark: #0A0A14;
     --primary-glow: #3182CE;
     --secondary-glow: #8A31CE;
+    --brand-brown: #AF692F; /* ADD THIS LINE */
     --text-primary: #F7FAFC;
     --text-secondary: #A0AEC0;
     --glass-bg: rgba(26, 32, 44, 0.6);
@@ -76,17 +77,35 @@ body.scrolled #main-header {
     height: 100%;
 }
 
+/* --- LOGO (NEW) --- */
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-primary); /* This styles the "make" part */
     text-decoration: none;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
-.logo span {
+
+/* A subtle hover effect for interactivity */
+.logo:hover {
+    transform: scale(1.03);
+}
+
+/* This styles the "Better" part in glowing blue */
+.logo .logo-primary {
     color: var(--primary-glow);
 }
 
+/* This styles the "369" part in brand brown with a glow */
+.logo .logo-secondary {
+    color: var(--brand-brown);
+    /* Layered text-shadow creates a soft, luminous glow effect */
+    text-shadow: 0 0 3px rgba(175, 105, 47, 0.8), 
+                 0 0 3px rgba(175, 105, 47, 0.6);
+}
 #main-nav ul {
     list-style: none;
     display: flex;
